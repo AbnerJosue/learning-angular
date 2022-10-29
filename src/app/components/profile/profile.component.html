@@ -1,0 +1,89 @@
+<div class="container light-style flex-grow-1 container-p-y">
+  <div class="card overflow-hidden">
+
+    <h4 class="font-weight-bold py-3 mb-4 p-2 ">
+      Configuracion De Perfil
+    </h4>
+    <div class="row no-gutters row-bordered row-border-light">
+      <div class="col-md-3 pt-0">
+        <div class="list-group list-group-flush account-settings-links">
+          <a class="list-group-item list-group-item-action active" id="account-general" href="#account-general"
+            role="tab" aria-controls="home">General</a>
+          <a class="list-group-item list-group-item-action" href="#account-change-password">Cambiar Contraseña</a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="tab-content">
+          <div class="tab-pane fade active show" id="account-general" role="tabpanel">
+            <div class="card-body media align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100">
+                <path
+                  d="M12 2.5a5.25 5.25 0 00-2.519 9.857 9.005 9.005 0 00-6.477 8.37.75.75 0 00.727.773H20.27a.75.75 0 00.727-.772 9.005 9.005 0 00-6.477-8.37A5.25 5.25 0 0012 2.5z">
+                </path>
+              </svg>
+              <div class="media-body ml-4">
+                <label class="btn btn-outline-primary">
+                  Actualizar fotografia
+                  <input type="file" class="account-settings-fileinput">
+                </label> &nbsp;
+                <button type="button" class="btn btn-default md-btn-flat">Reset</button>
+
+                <div class="text-light small mt-1">Puedes usar JPG o PNG. Max size of 800K</div>
+              </div>
+            </div>
+            <hr class="border-light m-0">
+            <div class="card-body">
+              <div class="form-group">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control mb-1" value="ajestrada">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" value="Abner Josue">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Apellidos</label>
+                <input type="text" class="form-control" value="Estrada Espina">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Correo</label>
+                <input type="text" class="form-control mb-1" value="aestradae3@miumg.edu.gt">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Carnet</label>
+                <input type="text" class="form-control" value="992323">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="account-change-password">
+            <div class="card-body pb-2">
+
+              <div class="form-group">
+                <label class="form-label">Current password</label>
+                <input type="password" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">New password</label>
+                <input type="password" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Repeat new password</label>
+                <input type="password" class="form-control">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-right mt-3 p-2 ">
+      <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+      <button type="button" class="btn btn-default">Cancel</button>
+    </div>
+  </div>
+
+
+
+</div>
