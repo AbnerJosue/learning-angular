@@ -7,21 +7,23 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/task" routerLinkActive="active">Modulos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/profile" routerLinkActive="active">Perfil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/private" routerLinkActive="active">Tareas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/students" routerLinkActive="active">Estudiantes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/students-grades" routerLinkActive="active">Calificaciones</a>
-          </li>
+            <ng-container *ngIf="authService.loggedIn();">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/task" routerLinkActive="active">Modulos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/profile" routerLinkActive="active">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/private" routerLinkActive="active">Tareas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/students" routerLinkActive="active">Estudiantes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/students-grades" routerLinkActive="active">Calificaciones</a>
+            </li>
+        </ng-container>
         </ul>
         <ul class="navbar-nav ml-auto" >
           <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
@@ -34,7 +36,7 @@
           </ng-container>
           <ng-template  #loggedIn>
             <li class="nav-item">
-              <a class="nav-link" (click)="authService.logout()">
+              <a class="nav-link" style="cursor: pointer;" (click)="authService.logout()">
                 Cerrar cuenta
               </a>
             </li>

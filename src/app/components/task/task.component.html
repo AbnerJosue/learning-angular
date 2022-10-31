@@ -1,94 +1,20 @@
 <div class="container">
     <h1 class="text-center">MODULOS</h1>
     <div class="row">
-        <div class="col-sm-6 p-2 ">
+        <div class="col-sm-6 p-2 " *ngFor="let task of tasks">
             <div class="card">
                 <div class="card-body">
                     <img width="10" height="150"
-                        src="https://firebasestorage.googleapis.com/v0/b/apirestful-ed65f.appspot.com/o/que-es-javascript.jpg?alt=media&token=15711d20-85fe-437a-91d8-8e972ae384e0"
+                        src={{task.imagen}}
                         class="card-img-top" alt="...">
                     <div class="py-2">
-                        <h5 class="card-title">DESARROLLO WEB</h5>
-                        <p class="card-text">220229323A</p>
-                        <a href="#" class="btn btn-primary">INGRESAR</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 p-2">
-            <div class="card">
-                <div class="card-body">
-                    <img width="10" height="150"
-                        src="https://firebasestorage.googleapis.com/v0/b/apirestful-ed65f.appspot.com/o/que-es-javascript.jpg?alt=media&token=15711d20-85fe-437a-91d8-8e972ae384e0"
-                        class="card-img-top" alt="...">
-                    <div class="py-2">
-                        <h5 class="card-title">REDES DE COMPUTADORAS I - </h5>
-                        <p class="card-text">22022-9941-038-A</p>
-                        <a href="#" class="btn btn-primary">INGRESAR</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 p-2">
-            <div class="card">
-                <div class="card-body">
-                    <img width="10" height="150"
-                        src="https://firebasestorage.googleapis.com/v0/b/apirestful-ed65f.appspot.com/o/que-es-javascript.jpg?alt=media&token=15711d20-85fe-437a-91d8-8e972ae384e0"
-                        class="card-img-top" alt="...">
-                    <div class="py-2">
-                        <h5 class="card-title">ETICA PROFESIONAL - </h5>
-                        <p class="card-text">22022-9941-039-A</p>
-                        <a href="#" class="btn btn-primary">INGRESAR</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 p-2">
-            <div class="card">
-                <div class="card-body">
-                    <img width="10" height="150"
-                        src="https://firebasestorage.googleapis.com/v0/b/apirestful-ed65f.appspot.com/o/que-es-javascript.jpg?alt=media&token=15711d20-85fe-437a-91d8-8e972ae384e0"
-                        class="card-img-top" alt="...">
-                    <div class="py-2">
-                        <h5 class="card-title">ANÁLISIS DE SISTEMAS II - </h5>
-                        <p class="card-text">22022-9941-037-A</p>
-                        <a href="#" class="btn btn-primary">INGRESAR</a>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 p-2">
-            <div class="card">
-                <div class="card-body">
-                    <img width="10" height="150"
-                        src="https://firebasestorage.googleapis.com/v0/b/apirestful-ed65f.appspot.com/o/que-es-javascript.jpg?alt=media&token=15711d20-85fe-437a-91d8-8e972ae384e0"
-                        class="card-img-top" alt="...">
-                    <div class="py-2">
-                        <h5 class="card-title">ARQUITECTURA DE COMPUTADORAS I A</h5>
-                        <p class="card-text">120229989034A</p>
-                        <a href="#" class="btn btn-primary">INGRESAR</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 p-2">
-            <div class="card">
-                <div class="card-body">
-                    <img width="10" height="150"
-                        src="https://firebasestorage.googleapis.com/v0/b/apirestful-ed65f.appspot.com/o/que-es-javascript.jpg?alt=media&token=15711d20-85fe-437a-91d8-8e972ae384e0"
-                        class="card-img-top" alt="...">
-                    <div class="py-2">
-                        <h5 class="card-title">ARQUITECTURA DE COMPUTADORAS I A</h5>
-                        <p class="card-text">120229989034A</p>
+                        <h5 class="card-title">{{task.title}}</h5>
+                        <p class="card-text">{{task.asignacion}}</p>
+                        <p>{{task.description}}</p>
                         <a href="#" class="btn btn-primary">INGRESAR</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> 
