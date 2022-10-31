@@ -5,14 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SiginComponent } from './components/sigin/sigin.component';
+import { MatTableModule } from '@angular/material/table'  
 import { TaskComponent } from './components/task/task.component';
 import { PrivateTaskComponent } from './components/private-task/private-task.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { StudentsComponent } from './components/students/students.component';
 import { StudentGradesComponent } from './components/student-grades/student-grades.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AuthGuard } from './auth.guard'
-import { TokenInterceptorService } from './services/token-interceptor.service'
+import { TokenInterceptorService } from './services/token-interceptor.service';
+import { NewTaskComponent } from './components/new-task/new-task.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +22,14 @@ import { TokenInterceptorService } from './services/token-interceptor.service'
     TaskComponent,
     PrivateTaskComponent,
     ProfileComponent,
-    StudentsComponent,
-    StudentGradesComponent
+    StudentGradesComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatTableModule,
     HttpClientModule
   ],
   providers: [

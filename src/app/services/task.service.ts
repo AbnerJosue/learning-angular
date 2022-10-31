@@ -21,7 +21,15 @@ export class TaskService {
 
 
   getPrivateTask() {
-    return this.http.get<any>(`${this.URL}/private-task`)
+    return this.http.get<any>(`${this.URL}/getTask`)
+  }
+
+  gettingTaks(){
+    return this.http.get<any>(`${this.URL}/new/get-task`)
+  }
+
+  createdTask(newTaks:any){
+    return this.http.get<any>(`${this.URL}/new-task`,newTaks)
   }
 
 }

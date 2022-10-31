@@ -1,16 +1,16 @@
 <div class="container">
     <h1 class="text-center">MODULOS</h1>
     <div class="row">
-        <div class="col-sm-6 p-2 " *ngFor="let task of tasks">
+        <div class="col-sm-6 p-2 " *ngFor="let module of modules">
             <div class="card">
                 <div class="card-body">
                     <img width="10" height="150"
-                        src={{task.imagen}}
+                        src={{module.imagen}}
                         class="card-img-top" alt="...">
                     <div class="py-2">
-                        <h5 class="card-title">{{task.title}}</h5>
-                        <p class="card-text">{{task.asignacion}}</p>
-                        <p>{{task.description}}</p>
+                        <h5 class="card-title">{{module.title}}</h5>
+                        <p class="card-text">{{module.asignacion}}</p>
+                        <p>{{module.description}}</p>
                         <a href="#" class="btn btn-primary">INGRESAR</a>
                     </div>
                 </div>

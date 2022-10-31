@@ -5,9 +5,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SiginComponent } from './components/sigin/sigin.component';
 import { PrivateTaskComponent } from './components/private-task/private-task.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { StudentsComponent } from './components/students/students.component';
 import { StudentGradesComponent } from './components/student-grades/student-grades.component';
 import { AuthGuard } from './auth.guard';
+import { NewTaskComponent } from './components/new-task/new-task.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/tasks', pathMatch: 'full' },
@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SiginComponent },
   { path: 'profile', component: ProfileComponent ,canActivate: [AuthGuard]},
-  { path: 'students', component: StudentsComponent ,canActivate: [AuthGuard]},
-  { path: 'students-grades', component: StudentGradesComponent,canActivate: [AuthGuard] }
+  { path: 'students-grades', component: StudentGradesComponent,canActivate: [AuthGuard] },
+  { path: 'newTask', component: NewTaskComponent ,canActivate: [AuthGuard]}
 ];
 
 @NgModule({

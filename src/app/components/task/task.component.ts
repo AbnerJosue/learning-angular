@@ -12,7 +12,7 @@ import { TaskService } from '../../services/task.service'
 export class TaskComponent implements OnInit {
   
 
-  tasks:any= [];
+  modules:any= [];
 
   constructor(private tasksService: TaskService) { }
 
@@ -21,7 +21,7 @@ export class TaskComponent implements OnInit {
     .subscribe(
       res => {
         console.log(res)
-        this.tasks = res.user; 
+        this.modules = res.user; 
       }, 
       e => console.log(e)
     )
