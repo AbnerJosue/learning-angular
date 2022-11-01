@@ -14,7 +14,6 @@ export class NewTaskComponent implements OnInit {
     "module": "",
     "asignacion": ""
   }
-
   tasks: any = [];
 
   constructor(
@@ -32,8 +31,20 @@ export class NewTaskComponent implements OnInit {
     )
   }
 
+  deleteTask(props: any){
+    console.log(props._id)
+    this.tasksService.deleteTask(props._id)
+    .subscribe(
+      res=> {
+        console.log(res)
+      },
+      e => console.log('error',e)
+    )
+
+  }
 
   createTaks() {
+    console.log(this.newTask);
     this.tasksService.createdTask(this.newTask)
     .subscribe(
       res=> {

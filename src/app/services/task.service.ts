@@ -29,7 +29,13 @@ export class TaskService {
   }
 
   createdTask(newTaks:any){
-    return this.http.get<any>(`${this.URL}/new-task`,newTaks)
+    return this.http.post<any>(`${this.URL}/new-task`,newTaks)
+  }
+
+  deleteTask(_id:any){
+    return this.http.delete<any>(`${this.URL}/delete-task`,{
+      body: {_id}
+    })
   }
 
 }

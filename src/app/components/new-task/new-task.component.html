@@ -19,12 +19,17 @@
         <button type="submit" class="btn btn-primary btn-block">CREAR</button>
     </form>
 </div>
+<div class="container" style="padding-top: 100px">
+    <h1> Tareas Asignadas </h1>
+</div>
+<div  style="padding-top: 30px;  ">
+    <ul class="list-group" style="cursor: pointer;" >
+        <li class="list-group-item" style="margin:20px; border-radius: 1px solid #DCDCDC;"  *ngFor="let task of tasks" >
+            <h4 style="font-weight: 800;">{{task.title}}</h4>
+            <h6>Descripcion:</h6>
+            <p style="font-weight: 100;">{{task.description}}</p>
+            <button  class="btn btn-secondary btn-block"  (click)="deleteTask(task)" > ELIMINAR </button>
 
-
-<div  style="padding-top: 100px;">
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let task of tasks" >
-            {{task.title}}
         </li>
     </ul>
 </div>
